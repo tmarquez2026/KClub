@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Quiz | KClub</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@600&display=swap" rel="stylesheet"> 
+        <meta charset="utf-8">
+        <style>
+        body {
+            height: 1000px;
+            margin: 0;
+            background-color: black;
+        }
+        nav {
+            background-color: #081014;
+            box-shadow: 0 -10px 50px#cbffee;
+            position: fixed;
+
+        }
+        .bottomborder {
+            border-bottom: 3px solid #cbffee;
+            height: 74px;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 0 16px 0 16px;
+        }
+        .pshslogo {
+            background-image: url('PisayLogo.png'); 
+            background-size: contain; 
+            width: 272px; 
+            height: 52px;
+            display: inline-block;
+        }
+        ul {
+            margin-top: 18px;
+            position: absolute;
+            display: inline;
+        }
+        ul li {
+            font-size: 12pt;
+            font-family: 'Lato', sans-serif;
+            display: inline;
+            color: white;
+            margin-right: 5px;
+        }
+        ul li a {
+            padding-top: 17px;
+            padding-bottom: 17px;
+            padding-left: 10px;
+            padding-right: 10px;
+            text-decoration: none;
+            color: white;
+            border-radius: 20px;
+            border-style: solid;
+            border-width: 3px;
+            border-color: rgba(8, 16, 20, 0)
+        }
+
+        ul li a:hover {
+            border-radius: 20px;
+            border-style: solid;
+            border-width: 3px;
+            border-color: #cbffee;
+            box-shadow: 0 0px 30px #cbffee; 
+        }
+        #logout {
+            font-family: 'Lato', sans-serif;
+            padding-top: 17px;
+            padding-bottom: 17px;
+            padding-left: 10px;
+            padding-right: 10px;
+            text-decoration: none;
+            margin-right: 50px;
+            margin-top: 0px;
+            right: 0;
+            color: rgb(255, 121, 121);
+            border: rgb(255, 163, 163, 0) 3px solid;
+            border-radius: 10px;
+            position: absolute;
+        }
+        #logout:hover {
+            border: red 3px solid;
+            border-radius: 20px;
+            box-shadow: 0 0px 30px rgb(255, 121, 121);
+        }
+        article {
+            box-shadow: 0 0 20px #cbffee;
+            box-shadow: 0 0 20px #cbffee;
+            width: 80%;
+            border: 3px solid #cbffee;
+            border-radius: 10px;
+            height: 650px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #081014;
+            margin-top: 30px;
+        }
+        header {
+            color: white;
+            font-size: 30px;
+            margin-left: 200px;
+            margin-top: 130px;
+            font-family: 'Noto Sans', sans-serif;
+        }
+        #small {
+            font-family: 'Lato', sans-serif;
+            font-size: 20px;
+            padding-left: 10px;
+            margin-bottom: -20px;
+        }
+        #fa {
+            padding-left: 10px;
+        }
+        #section {
+            width: 90%;
+            border: 3px solid #cbffee;
+            border-radius: 10px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 45%;
+            margin-top: 45px;
+            background-color: black;
+            color:white;
+            font-family: 'Lato', sans-serif;
+            font-size: 18px;
+        }
+        #times {
+            margin-top: 40px;
+            margin-left: 30px;
+        }
+        .bold {
+            font-family: 'Noto Sans', sans-serif;
+        }
+        hr {
+            color:#cbffee;
+            margin-top: 20px;
+            width: 96%;
+        }
+        #instructions {
+            margin-left: 30px;
+            margin-top: 20px;
+        }
+        article #section #instructions ul li {
+            display:list-item;
+            color: white;
+            line-height: 1.5;
+        }
+        #restrictions {
+            color: white;
+            font-family: 'Lato', sans-serif;
+            margin-top: 50px;
+            margin-left: 100px;
+            font-size: 16px;
+        }
+        #start {
+            padding: 20px;
+            border: #cbffee solid 3px;
+            width: 10%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 50px;
+            color: white;
+            font-family: 'Noto Sans', sans-serif;
+            border-radius: 25px;
+            text-align: center;
+            font-size: 18px;
+            background-color: black;
+            box-shadow: 0 0 20px #cbffee;
+            box-shadow: 0 0 20px #cbffee;
+        }
+        #start:hover {
+            background-color: #cbffee;
+            color: black;
+            border-color: black;
+        }
+        a {text-decoration: none;}
+        img {
+            box-shadow: 0 0 20px rgb(255, 25, 209);
+        }
+        @media only screen and (max-width: 768px){
+            #logout{
+                margin-left: 120px;
+            }
+            #section {
+                height: 360px;
+            }
+            article ul li {
+                font-size: 12px;
+            }
+            article ul {
+                width: 60%;
+            }
+            header {
+                margin-left: 100px;
+            }
+            #restrictions {
+                margin-left: 60px;
+            }
+            #start {
+                font-size: 13px;
+                width: 15%;
+                padding: 15px;
+            }
+        }
+        @media only screen and (max-width: 386px){
+            #logout{
+                margin-right: 20px;
+                font-size: 13px;
+                margin-top: 13px;
+                padding: 3px;
+            }
+            a.pshslogo {
+                width: 140px;
+                height: 28px;
+                margin-top: 13px;
+            }
+            nav.bottomborder ul li a{
+                font-size: 11px;
+                padding: 2px;
+            }
+            nav.bottomborder ul {
+                padding: 0;
+                margin-left: 10px;
+            }
+            header {
+                margin-left: 40px;
+            }
+            #fa {
+                font-size: 20px;
+            }
+            #section #times {
+                font-size: 17px;
+            }
+            #instructions {
+                margin-left: 20px;
+            }
+            #instructions ul{
+                padding-left: 25px;
+            }
+            #section {
+                height: 560px;
+            }
+            #restrictions {
+                margin-top: 80px;
+                margin-left: 30px;
+            }
+        }
+        </style>
+    </head>
+    <body>
+        <nav class="bottomborder">
+            <div style="height: 70px; width: 272px; padding-top: 9px;">
+                <a class="pshslogo" href="home.html"></a>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="author.html">Author Page</a></li> 
+                </ul>
+                <a href="index.html" id="logout">Log out</a>
+            </div>  
+        </nav>
+    }
+        <header>
+            <table>
+                <tr>
+                    <td rowspan="2" style="width: 55px;"><img src="quiz.png" alt="icon" width="55" style="margin-bottom: -5px; border-radius: 10px"></td>
+                    <td id="small">Quiz</td>
+                </tr>
+                <tr>
+                    <td id="fa">Formative Assesment 4</td>
+                </tr>
+            </table>
+        </header>
+        <article aria-label="article">
+            <div id="section">
+                <div id="times">
+                    <span class="bold">Opened:</span> Thursday, 20 April 2023, 12:00 AM
+                    <br>
+                    <span class="bold">Closed:</span> Friday, 9 June 2023, 11:59 PM
+                </div>
+                <hr>
+                <div id="instructions"> 
+                    <span class="bold">GENERAL INSTRUCTIONS</span>
+                    <br>
+                    <ul>
+                        <li>This will be your Formative Assessment 4. The coverage will be about electron domain geometry and molecular geometry</li>
+                        <li>The seat work is open until June 9 (11:59 p.m.) only. There is a 30-minute limit in answering the activity. Opening of notes is not allowed.</li>
+                        <li>The test type for this formative assessment will be multiple choice. Read each question carefully. The quiz has a total of 2 points</li>
+                        <li>You pledge to uphold the values of a Pisay scholar--integrity, passion for excellence, and service to the nation--by practicing academic honesty in all that you do.</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="restrictions">
+                <span>Attempts allowed: 1</span>
+                <br>
+                <br>
+                <span>Time limit: 30 mins</span>
+            </div>
+            <a href="question1.html"><div id="start">
+                Start attempt
+            </div></a>
+        </article>
+    </body>
+</html>

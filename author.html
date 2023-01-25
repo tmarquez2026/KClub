@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@600&display=swap" rel="stylesheet">
+        <title>Author Page | KClub</title>
+        <style>
+            body {
+                height: 3100px;
+                margin: 0;
+                background-color: black;
+            }
+            nav {
+                background-color: #081014;
+                box-shadow: 0 -10px 50px#cbffee;
+                position: fixed;
+            }
+            .bottomborder {
+                border-bottom: 3px solid #cbffee;
+                height: 74px;
+                width: 100%;
+                box-sizing: border-box;
+                padding: 0 16px 0 16px;
+            }
+            .pshslogo {
+                background-image: url('Pisaylogo.png'); 
+                background-size: contain; 
+                width: 272px; 
+                height: 52px;
+                display: inline-block;
+            }
+            ul {
+                margin-top: 15px;
+                position: absolute;
+                display: inline;
+            }
+            ul li {
+                font-size: 12pt;
+                font-family: 'Lato', sans-serif;
+                display: inline;
+                color: white;
+                margin-right: 5px;
+            }
+            ul li a {
+                padding-top: 17px;
+                padding-bottom: 17px;
+                padding-left: 10px;
+                padding-right: 10px;
+                text-decoration: none;
+                color: white;
+                border-radius: 20px;
+                border-style: solid;
+                border-width: 3px;
+                border-color: rgba(8, 16, 20, 0)
+            }
+            ul li a:hover {
+                border-radius: 20px;
+                border-style: solid;
+                border-width: 3px;
+                border-color: #cbffee;
+                box-shadow: 0 0px 30px #cbffee; 
+            }
+            #logout {
+                padding-top: 17px;
+                padding-bottom: 17px;
+                padding-left: 10px;
+                padding-right: 10px;
+                text-decoration: none;
+                margin-right: 50px;
+                margin-top: -6px;
+                right: 0;
+                color: rgb(255, 121, 121);
+                border: rgb(255, 163, 163, 0) 3px solid;
+                border-radius: 10px;
+                position: absolute;
+            }
+            #logout:hover {
+                border: red 3px solid;
+                border-radius: 20px;
+                box-shadow: 0 0px 30px rgb(255, 121, 121);
+            }
+            header {
+                color: white;
+                margin-top: 100px;
+                font-size: 45px;
+                font-family: 'Noto sans', sans-serif;
+                margin-left: 80px;
+            }
+            aside {
+                margin-left: 80px;
+                border-radius: 20px;
+                border: 3px solid #cbffee;
+                box-shadow: 0 0 20px #cbffee;
+                width: 40%;
+                float: left;
+                margin-top: 40px;
+            }
+            #section {
+                margin-top: 40px;
+                float: right;
+                margin-right: 80px;
+                width: 45%;
+                border-radius: 20px;
+                border: 3px solid #cbffee;
+                box-shadow: 0 0 20px #cbffee;
+                font-family: 'Lato', sans-serif;
+                font-size: 25px;
+                padding: 30px;
+                color: white;
+                margin-bottom: 40px;
+            }
+            h2 {
+                color: white;
+                margin-top: 750px;
+                font-size: 60px;
+                font-family: 'Noto sans', sans-serif;
+                margin-left: 710px;
+            }
+            .card {
+                margin-top: 50px;
+                margin-left: 110px;
+                margin-right: 110px;
+                position: inherit;
+            }
+            .dos {
+                padding-bottom: 60px;
+            }
+            .tres {
+                padding-bottom: 30px;
+            }
+            .bot {
+                margin-top: 150px;
+                margin-left: 400px;
+            }
+            .botu {
+                margin-top: 150px;
+                margin-right: 250px;
+            }
+            #reference {
+                border: solid 3px #cbffee;
+                color: white;
+                font-family: 'Lato', sans-serif;
+                width: 30%;
+                border-radius: 20px;
+                float: right;
+                margin-right: 200px;
+                font-size: 20px;
+                text-align: center;
+                margin-top: 20px;
+                padding: 10px;
+            }
+            @media only screen and (max-width:768px) {
+                body {
+                    width: 1000px;
+                }
+                #logout{
+                    margin-left: 120px;
+                }
+                #section {
+                    margin-right: 50px;
+                    font-size: 20px;
+                    text-align: justify;
+                }
+                aside {
+                    margin-left: 50px;
+                }
+                header {
+                    margin-left: 50px;
+                }
+                #reference {
+                    margin-right: 100px;
+                    margin-top: 80px ;
+                }
+                h2 {
+                    font-size: 50px;
+                    margin-top: 650px;
+                    margin-left: 330px;
+                }
+                .card {
+                    width: 20rem !important;
+                    margin-left: 80px;
+                    margin-right: 80px;
+                }
+                .dos {
+                    padding-bottom: 120px;
+                }
+                .bot {
+                    margin-top: 50px;
+                }
+                .faith {
+                    padding-bottom: 60px;
+                }
+                .botu {
+                    margin-top: 70px ;
+                    width: 23rem !important;
+                    float: none;
+                    margin-left: 320px;
+                }
+                #gpic {
+                    width: 394px;
+                }
+            }
+            @media only screen and (max-width:384px) {
+                    #logout {
+                        font-size: 30px;
+                        margin-top: 34px;
+                        padding: 3px;
+                        position: absolute;
+                        top: 0;
+                    }
+                    nav.bottomborder {
+                        height: 110px;
+                    }
+                    header {
+                        margin-top: 200px;
+                    }
+                    a.pshslogo {
+                        width:400px;
+                        height: 80px;
+                        margin-top: 13px;
+                    }
+                    nav.bottomborder ul li a{
+                        font-size: 30px;
+                        padding: 4px;
+                    }
+                    nav.bottomborder ul {
+                        padding: 0;
+                        margin-top: -70px;
+                        margin-left: 420px;
+                    }
+                    #nav {
+                        height: 110px !important
+                    }
+            }
+        </style>
+            <body>
+                <nav class="bottomborder">
+                    <div id="nav" style="height: 70px; width: 272px; padding-top: 9px;">
+                        <a class="pshslogo" href="home.html"></a>
+                        <ul>
+                            <li><a href="home.html" style="color: white;">Home</a></li>
+                            <li><a href="author.html" style="color: white;">Author Page</a></li>
+                        </ul>
+                        <a href="index.html" id="logout">Logout</a>
+                    </div>  
+                </nav>
+                <br>
+                <header>
+                    <p><b>About the Authors</b></p>
+                </header>
+                <aside>
+                    <img id="gpic" src="grouppic.jpg" alt="grouppic" style="border-radius: 20px;" width="757">
+                </aside>
+                <div id="section">
+                        <p id="Intro">     Hi, welcome to our version of KClub!! 
+                            We wanted to see how KHub would be designed under our vision. Instantly, we thought dark mode because of course we would (be one with the dark side). 
+                            After much thought, we also realized seeing is an important part of being productive so begrudgingly we added some lights. 
+                            Neon lights !! To give an easy on the eyes glow in the generally dark background so we can remain comfortably within the dark. KClub comes from this because instead of
+                            knowledge hub its knowledge club, club because of the neon lights.
+                            Anyways, meet the team…</p>
+                        </div>
+                <div id="reference">
+                    References: PSHS CLC KHub
+                </div>
+                <h2>
+                    Team Members
+                </h2>
+                <article>
+                    <div class="card" style="width: 25rem;box-shadow:0 0 40px #cbffee; float:left">
+                        <img class="card-img-top img" src="tristan_2.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title" style="color:#8c0000; font-size:30px">Group Leader</h5>
+                            <p class="card-text" style="font-size: 22px;"><b>Tristan Japheth L. Marquez</b></p><br>
+                            <p class="card-text" style="font-size: 20px;"> - Head of Operations <br> - Lead Coder (Quiz/Grades/50% Homepage/50% Author Page) <br> - Excellent Boss (not contractually obliged to say this) <br> - Diagnosed with overcoding (Di na kaya) <br> - Was forced to take pic</p>
+                        </div>
+                        </div>
+                    <div class="card" style="width: 25rem;box-shadow:0 0 40px #cbffee; float:left">
+                        <img class="card-img-top img" src="chris.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title" style="color:#8c0000; font-size:30px">Coder</h5>
+                            <p class="card-text dos" style="font-size: 22px;"><b>Chris Yuan A. Gue</b></p><br>
+                            <p class="card-text" style="font-size: 20px;"> - Part of Coding Team <br> - Coded the whole course page  <br> - Willing to commit cybercrime to finish the project (for legal reasons that’s a joke) </p>
+                        </div>
+                        </div>
+                    <div class="card" style="width: 25rem;box-shadow:0 0 40px #cbffee; float:left">
+                        <img class="card-img-top img" src="sheldon.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title" style="color:#8c0000; font-size:30px">Coder</h5>
+                            <p class="card-text tres" style="font-size: 22px;"><b>Sheldon Anthony T. Liwanag </b></p><br>
+                            <p class="card-text" style="font-size: 20px;"> - Part of Coding Team <br> - Coded the Login page and 50% of the author page  <br> - 2AM grinder (as was our whole coding team pls support them) <br> -  PSHS Scholar. Bakit ang hirap dito. </p>
+                        </div>
+                        </div>
+                    <div class="card bot" style="width: 25rem;box-shadow:0 0 40px #cbffee; float:left">
+                        <img class="card-img-top img" src="faith.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title" style="color:#8c0000; font-size:30px">Designer and Coder</h5>
+                            <p class="card-text faith" style="font-size: 22px;"><b>Maria Katrina “Faith” F. Hernandez</b></p><br>
+                            <p class="card-text" style="font-size: 20px;"> - Lead Designer (designed the page you're looking at right now) <br> - Coded 50% of the Home Page <br> - Carries 95% of the sanity levels of the group <br> - Forced Tristan to take his pic</p>
+                        </div>
+                        </div>
+                    <div class="card botu" style="width: 25rem;box-shadow:0 0 40px #cbffee; float:left">
+                        <img class="card-img-top img" src="carlos.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title" style="color:#8c0000; font-size:30px">Content and Coordination Planning</h5>
+                            <p class="card-text tres" style="font-size: 22px;"><b>Jose Carlos Alejandro S. Yturralde</b></p><br>
+                            <p class="card-text" style="font-size: 20px;"> - Wrote the content for all of the pages <br> - Relatively minor coding <br> - Reliable idea approver and suggestor</p>
+                        </div>
+                        </div>
+                </article>
+                
+            </body>

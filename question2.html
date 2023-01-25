@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Question 2 | KClub</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">  
+        <style>
+        body {
+            height: 1200px;
+            margin: 0;
+            background-color: black;
+        }
+        nav {
+            background-color: #081014;
+            box-shadow: 0 -10px 50px#cbffee;
+            position: fixed;
+        }
+        .bottomborder {
+            border-bottom: 3px solid #cbffee;
+            height: 74px;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 0 16px 0 16px;
+        }
+        .pshslogo {
+            background-image: url('PisayLogo.png'); 
+            background-size: contain; 
+            width: 272px; 
+            height: 52px;
+            display: inline-block;
+        }
+        .bottomborder ul {
+            margin-top: 18px;
+            position: absolute;
+            display: inline;
+        }
+        .bottomborder ul li {
+            font-size: 12pt;
+            font-family: 'Lato', sans-serif;
+            display: inline;
+            color: white;
+            margin-right: 5px;
+        }
+        .bottomborder ul li a {
+            padding-top: 17px;
+            padding-bottom: 17px;
+            padding-left: 10px;
+            padding-right: 10px;
+            text-decoration: none;
+            color: white;
+            border-radius: 20px;
+            border-style: solid;
+            border-width: 3px;
+            border-color: rgba(8, 16, 20, 0)
+        }
+
+        .bottomborder ul li a:hover {
+            border-radius: 20px;
+            border-style: solid;
+            border-width: 3px;
+            border-color: #cbffee;
+            box-shadow: 0 0px 30px #cbffee; 
+        }
+        #logout {
+            padding-top: 17px;
+            padding-bottom: 17px;
+            padding-left: 10px;
+            padding-right: 10px;
+            text-decoration: none;
+            margin-right: 50px;
+            margin-top: 0px;
+            right: 0;
+            color: rgb(255, 121, 121);
+            border: rgb(255, 163, 163, 0) 3px solid;
+            border-radius: 10px;
+            position: absolute;
+            font-family: 'Lato', sans-serif;
+        }
+        #logout:hover {
+            border: red 3px solid;
+            border-radius: 20px;
+            box-shadow: 0 0px 30px rgb(255, 121, 121);
+        }
+
+        article {
+            box-shadow: 0 0 20px #cbffee;
+            height: 750px;
+            margin-top: 60px;
+            width: 60%;
+            border: 3px solid #cbffee;
+            border-radius: 10px;
+            margin-left: 100px;
+            float: left;
+            background-color: #081014;
+        }
+        aside {
+            box-shadow: 0 0 20px #cbffee;
+            height: 220px;
+            margin-top: 60px;
+            width: 20%;
+            border: 3px solid #cbffee;
+            border-radius: 10px;
+            margin-right: 100px;
+            display: inline;
+            float: right;
+            background-color: #081014;
+        }
+        header {
+            color: white;
+            font-size: 30px;
+            margin-top: 130px;
+            margin-left: 100px;
+            font-family: 'Noto Sans', sans-serif;
+        }
+        #quiz{
+            margin-bottom: -10px;
+            box-shadow: 0 0 20px #ff2ca7;
+        }
+        #number {
+            height: 65px;
+            margin-top: 80px;
+            width: 10%;
+            border: 3px solid #cbffee;
+            border-radius: 10px;
+            margin-left: 50px;
+            float: left;
+            background-color: #081014;
+        }
+        #question {
+            border: #cbffee 3px solid;
+            width: 70%;
+            background-color: black;
+            height: 570px;
+            border-radius: 20px;
+            margin-top: 90px;
+            float: right;
+            margin-right: 80px;
+        }
+        #top {
+            font-size: 18px;
+            color: white;
+            font-family: 'Lato', sans-serif; 
+        }
+        ul.Quiz li h4 {
+            color: white;
+        }
+        ul.Choices li label {
+            color: white;
+            font-family: 'Lato', sans-serif; 
+        }ul.Choices li {
+            margin-top: 5px;
+        }
+        H4{
+            font-family: 'Lato', sans-serif; 
+        }
+        span {
+            margin-left: 10px;
+        }
+        h1 {
+            color: white;
+            margin-top: 30px !important;
+            margin-left: 20px;
+            font-family: 'Noto Sans', sans-serif;
+        }
+        .number {
+            width: 40px;
+            height: 50px;
+            border: 3px solid #cbffee;
+            border-radius: 10px;
+            margin-left: 20px;
+            float: left;
+        }
+        #current {
+            background-color: #3b5a6a;
+        }
+        #collection a {
+            width: 40px;
+            height: 50px;
+            border: 3px solid #cbffee;
+            border-radius: 10px;
+            margin-left: 20px;
+            float: left;
+        }
+        #collection a:hover {
+            background-color: #3b5a6a;
+        }
+        #finish a{
+            color: #cbffee;
+            text-decoration: none;
+            font-family: 'Lato', sans-serif;
+            margin-left: 20px;
+            margin-top: 20px;            
+        }
+        #shortcut {
+            color: white;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        a:visited {
+            color: white;
+        }
+        @media only screen and (max-width: 768px){
+            #logout{
+                margin-left: 120px;
+            }
+            #question {
+                width: 60%;
+                margin-right: 30px;
+                margin-top: 80px;
+                height: 365px;
+            }
+            #pic {
+                width: 75%;
+                margin-left: 25px !important;
+            }
+            #number {
+                margin-left: 30px;
+                margin-right: 15px;
+                width: 20%;
+            }
+            article {
+                height: 500px;
+                margin-left: 40px;
+            }
+            aside {
+                margin-right: 50px;
+                height: 240px;
+            }
+            header {
+                margin-left: 50px;
+            }
+            #quiz {
+                width: 6%;
+            }
+        }
+        @media only screen and (max-width:386px) {
+            #logout{
+                margin-right: 20px;
+                font-size: 13px;
+                margin-top: 15px;
+                padding: 3px;
+            }
+            a.pshslogo {
+                width: 140px;
+                height: 28px;
+                margin-top: 13px;
+            }
+            nav.bottomborder ul li a{
+                font-size: 11px;
+                padding: 2px;
+            }
+            nav.bottomborder ul {
+                padding: 0;
+                margin-left: 10px;
+            }
+            header {
+                margin-top: 85px;
+                font-size: 13px !important;
+            }
+            #shortcut {
+                font-size: 13px;
+            }
+            #quiz {
+                width: 10%;
+            }
+            article {
+                margin-top: 30px !important;    
+                width: 78%;
+                height: 380px;
+            }
+            #uno {
+                font-size: 9px !important;
+            }
+            #number {
+                margin-top: 50px;
+                margin-left: 20px;
+                height: 50px;
+                margin-right: 5px;
+            }
+            #question {
+                margin-right: 15px;
+                margin-top: 40px;
+                height: 300px;
+            }
+            ul.Quiz {
+                padding-left: 10px;
+            }
+            H4 {
+                font-size: 12px;
+                text-align: center;
+            }
+            span {
+                font-size: 12px;
+            }
+            ul.Choices {
+                padding-left: 5px;
+            }
+            aside {
+                height: 160px;
+                float: left;
+                width: 80%;
+                margin-left: 40px;
+            }
+            h1 {
+                font-size: 16px;
+            }
+            .number {
+                width: 20px;
+                height: 25px;
+                font-size: 8px;
+            }
+            .aw {
+                margin: 7px !important;
+            }
+            #collection a {
+                width: 20px;
+                height: 25px;
+                font-size: 8px;
+            }
+            #finish {
+                margin-top: -30px;
+                text-decoration: underline;
+            }
+        }
+        </style>
+    </head>
+    <body>
+        <nav class="bottomborder">
+            <div style="height: 70px; width: 272px; padding-top: 9px;">
+                <a class="pshslogo"></a>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="#">Author Page</a></li>
+                </ul>
+                <a href="index.html" id="logout">Log out</a>
+            </div>  
+        </nav>
+    }   
+        <header>
+            <div id="shortcut" style="color: white;">
+                <a href="home.html">Home</a> >> <a href="course.html" style="color:white;">Chemistry 1</a> >> <a href="quiz.html"> Formative Assessment 4 </a>
+            </div>
+            <img id="quiz" src="quiz.png" alt="quiz" width="60" style="border-radius: 10px;">
+            Chemistry 1
+        </header>
+        <div>   
+            <article>
+                <div id="number">
+                    <div id="uno" style="font-family: 'Noto Sans', sans-serif;font-size: 15px; color:white; margin-top: 15px; text-align:center">
+                        Question <strong>2</strong>
+                        <br>
+                        1 pts
+                    </div>
+                    
+                </div>
+                <div id="question">
+                    <img src="dos.jpg" alt="question pic" width="550" style="margin-top: 40px;margin-left:35px" id="pic">
+                    <Ul Class="Quiz">
+                        <Li>
+                            <H4>What is the electron geometry of this lewis structure?</H4>
+                            <Ul Class="Choices">
+                                <Li>
+                                    <Label
+                                        ><Input Type="Radio" Name="Question0" Value="A"><Span>Trigonal Pyramidal</Span
+                                        ></Label
+                                    >
+                                </Li>
+                                <Li>
+                                    <Label
+                                        ><Input Type="Radio" Name="Question0" Value="B"><Span
+                                            >T-Shaped</Span
+                                        ></Label
+                                    >
+                                </Li>
+                                <Li>
+                                    <Label
+                                        ><Input Type="Radio" Name="Question0" Value="C"><Span
+                                            >Trigonal Bipyramidal</Span
+                                        ></Label
+                                    >
+                                </Li>
+                                <Li>
+                                    <Label
+                                        ><Input Type="Radio" Name="Question0" Value="D"><Span
+                                            >Tetrahedral</Span
+                                        ></Label>
+                                    >
+                                </Li>
+                            </Ul>
+                        </Li>
+                    </Ul>
+                </div>
+            </article>
+            <aside>
+                <h1>
+                    Quiz Navigation 
+                </h1>
+                <div id="collection">
+                        <a href="question1.html"><div class="aw" style="margin: 15px;color:white; font-family:'Noto Sans', sans-serif;">1</div></a>
+                    <div class="number" id="current">
+                        <div class="aw" style="margin: 15px;color:white;text-decoration:none;font-family:'Noto Sans', sans-serif;">2</div>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <div id="finish">
+                    <a href="quiz.html">Finish attempt...</a>
+                </div>
+            </aside>
+        </div>  
+    </body>
+</html>

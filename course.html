@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@600&display=swap" rel="stylesheet">
+        <title>Chemistry 1 - Arayat | KClub</title>
+        <style>
+        body {
+            margin: 0;
+            height: 2800px;
+            color:white;
+            font-family: 'Lato', sans-serif;
+        }
+        .image_background{
+            background-image: url("https://i.imgur.com/DdUAqpB.jpg");
+            background-size: cover;
+            width: 100%;
+            background-attachment: fixed;
+        }
+        .background {
+            background-color: rgb(0, 0, 0, 0.7);
+        }
+        nav {
+            background-color: #081014;
+            box-shadow: 0 -10px 50px#cbffee;
+            position: fixed;
+        }
+        #list_nav2 {
+            margin-left: 100px; 
+            margin-top: 23px;
+        }
+        .bottomborder {
+            border-bottom: 3px solid #cbffee;
+            height: 74px;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 0 16px 0 16px;
+        }
+        .pshslogo {
+            background-image: url('PisayLogo.png'); 
+            background-size: contain; 
+            width: 272px; 
+            height: 52px;
+            display: inline-block;
+        }
+        a{
+            text-decoration: none;
+        }
+        ul {
+            margin-top: 18px;
+            position: absolute;
+            display: inline;
+        }
+        ul li {
+            font-size: 12pt;
+            font-family: 'Lato', sans-serif;
+            display: inline;
+            color: white;
+            margin-right: 5px;
+        }
+        ul li a {
+            padding-top: 17px;
+            padding-bottom: 17px;
+            padding-left: 10px;
+            padding-right: 10px;
+            text-decoration: none;
+            color: white;
+            border-radius: 20px;
+            border-style: solid;
+            border-width: 3px;
+            border-color: rgba(8, 16, 20, 0);
+        }
+
+        ul li a:hover {
+            border-radius: 20px;
+            border-style: solid;
+            border-width: 3px;
+            border-color: #cbffee;
+            box-shadow: 0 0px 30px #cbffee; 
+        }
+        #nav2 {
+            margin-top: 57px;
+            height: 70px;
+            box-shadow: 0 10px 30px -10px #cbffee;
+            position: fixed;
+            background-color: #081014;
+        }
+        .transparent {
+            background-color: rgba(8, 16, 20, 0);
+            border-color: rgba(8, 16, 20, 0);
+        }
+        #picked{
+            padding-top: 17px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
+            text-decoration: none;
+            display: inline;
+            color: white;
+            border-bottom: 3px solid #cbffee;
+        }
+        article {
+            background-color: rgb(8, 16, 20, 0.7);
+            max-width: 80%;
+            padding-top: 40px;
+            margin-top: 50px;
+            margin-left: auto;
+            margin-right: auto;
+            border: 3px solid #cbffee;
+            border-radius: 10px;
+            box-shadow: 0 0 20px #cbffee;
+        }
+        h2 {
+            margin-left: 50px;
+            color: #cbffee;
+            font-family: 'Noto Sans', sans-serif;
+            font-size: 28pt;
+        }
+        h3 {
+            color: white;
+            font-family: 'Noto Sans', sans-serif;
+            font-size: 14pt;
+            text-decoration: none;
+        }
+
+        p {
+            color: white;
+            font-family: 'Lato', sans-serif;
+        }
+        .course_header{
+            font-size: 50px;
+            margin-top: 200px;
+            margin-left: 200px;
+            text-shadow: 0 0 10px #cbffee, 0 0 20px #cbffee, 0 0 30px #cbffee, 0 0 40px #cbffee, 0 0 50px #cbffee, 0 0 60px #cbffee;
+        }
+        .glow {
+            color: #cbffee;
+            animation: glow 1s ease-in-out infinite alternate;
+        }
+        .content_box {
+            margin-left: 30px;
+            margin-right: 30px;
+            margin-top: 8px;
+            margin-bottom: 8px;
+            padding: 24px;
+            height: fit-content;
+            border-radius: 15px;
+            border-width: 1px;
+            border-style: solid;
+            border-color: #cbffee;
+        }
+        .content_box a{
+            display: block;
+        }
+        .content_box a .announcements{
+            background-color: #739C9A;
+            border-radius: 5px;
+            border-width: 2px;
+            border-style: solid;
+            border-color: #cbffee;
+            box-shadow: 0 0 20px #739C9A;
+            width: 50px;
+            height: 50px;
+            float:left;
+        }
+        .content_box a .folder{
+            background-color: #6b9c7e;
+            border-radius: 5px;
+            border-width: 2px;
+            border-style: solid;
+            border-color: #cbffee;
+            box-shadow: 0 0 20px #6b9c7e;
+            width: 50px;
+            height: 50px;
+            float:left;
+        }
+        .content_box a .file{
+            background-color: #9C7B96;
+            border-radius: 5px;
+            border-width: 2px;
+            border-style: solid;
+            border-color: #cbffee;
+            box-shadow: 0 0 20px #9C7B96;
+            width: 50px;
+            height: 50px;
+            float:left;
+        }
+        .content_box a .upload{
+            background-color: #9C725C;
+            border-radius: 5px;
+            border-width: 2px;
+            border-style: solid;
+            border-color: #cbffee;
+            box-shadow: 0 0 20px #9C725C;
+            width: 50px;
+            height: 50px;
+            float:left;
+        }
+        .content_box a div img{
+            float: left;
+            margin-top: 13px;
+            margin-left: 13px;
+        }
+        .content_box h3 {
+            margin: 0;
+            margin-left: 60px;
+        }
+        #logout {
+            padding-top: 17px;
+            padding-bottom: 17px;
+            padding-left: 10px;
+            padding-right: 10px;
+            text-decoration: none;
+            margin-right: 50px;
+            margin-top: -6px;
+            right: 0;
+            color: rgb(255, 121, 121);
+            border: rgb(255, 163, 163, 0) 3px solid;
+            border-radius: 10px;
+            position: absolute;
+        }
+        #logout:hover {
+            border: red 3px solid;
+            border-radius: 20px;
+            box-shadow: 0 0px 30px rgb(255, 121, 121);
+        }
+        .description {
+            padding: 24px;
+            margin-top: 18px;
+            border-radius: 15px;
+            border-width: 1px;
+            border-style: solid;
+            border-color: #cbffee;
+            box-shadow: 0 0 10px #cbffee;
+            background-color: rgb(203, 255, 238, 0.3);
+        }
+        .content_box p {
+            margin: 0;
+        }
+        .done_check{
+            float: right;
+        }
+        .onlytext h3{
+            margin: 0 !important;
+        }
+        footer {
+            height: 250px;
+            width: 80%;
+            display:flex;
+            padding-left: 10%;
+            padding-right: 10%;
+            background-color: #1d3642;
+        }
+        #left{
+            width:30%;
+            flex: 30%;
+            box-sizing: border-box;
+        }
+        #middle{
+            width:30%;
+            text-align: center;
+            flex: 30%;
+            box-sizing: border-box;
+        }
+        #middle div{
+            display: block;
+            box-sizing: border-box;
+        }
+        #right{
+            width:30%;
+            flex: 30%;
+            box-sizing: border-box;
+            text-align: right;
+        }
+        @media only screen and (max-width: 768px){
+            h2{
+                font-size: 24pt;
+            }
+            h3{
+                font-size: 10pt;
+            }
+            .content_box a div img {
+                margin-top: 5px;
+                margin-left: 5px;
+            }
+            .content_box a .announcements{
+                width: 36px;
+                height: 36px;
+            }
+            .content_box a .folder{
+                width: 36px;
+                height: 36px;
+            }
+            .content_box a .file{
+                width: 36px;
+                height: 36px;
+            }
+            .content_box a .upload{
+                width: 36px;
+                height: 36px;
+            }
+            .course_header{
+                margin-left: 0;
+                text-align: center;
+            }
+            #logout{
+                margin-left: 120px;
+                margin-top: 1px;
+            }
+        }
+        @media only screen and (max-width: 384px){
+            .pshslogo{
+                width: 140px;
+                height: 28px;
+                margin-top: 13px;
+            }
+            ul{
+                padding: 0;
+            }
+            ul li a{
+                padding-top: 17px;
+                padding-bottom: 17px;
+                padding-left: 8px;
+                padding-right: 8px;
+            }
+            #list_nav2{
+                margin-left: 0 !important;
+                padding-left: 0 !important;
+            }
+            ul li{
+                font-size: 8pt;
+            }
+            article{
+                max-width: 95%;
+            }
+            .done_check{
+                float:none;
+            }
+            #logout{
+                margin-right: 20px;
+                font-size: 12px;
+                margin-top: 16px;
+                padding: 3px;
+            }
+        }
+        </style>
+    </head>
+    <body>
+        <div class="image_background">
+            <div class="background">
+                <div>
+                    <nav class="bottomborder">
+                        <div style="height: 70px; width: 272px; padding-top: 9px;">
+                            <a class="pshslogo" href="home.html"></a>
+                            <ul>
+                                <li><a href="home.html" style="color: white;">Home</a></li>
+                                <li><a href="author.html" style="color: white;">Author Page</a></li>
+                            </ul>
+                            <a href="index.html" id="logout">Logout</a>
+                        </div>  
+                    </nav>
+                    <br>
+                    <div id="nav2" class="bottomborder">
+                        <ul id="list_nav2">
+                            <li><div class="transparent" id="picked">Course</div></li>
+                            <li><a href="#" class="transparent">Participants</a></li>
+                            <li><a href="Grades.html" class="transparent">Grades</a></li>
+                            <li><a href="#" class="transparent">Competencies</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <h2 class="course_header glow">Chemistry 1 - Arayat</h2>
+                <article>
+                    <section>
+                        <h2>▼ General</h2>
+                        <div class="content_box">
+                            <a href="#">
+                                <div class="announcements">
+                                    <img alt="Image Loading" src="announcements.png" height="24" width="24">
+                                </div>
+                                <h3>FORUM</h3>
+                                <h3 style="color: #076ef5">Announcements</h3>
+                            </a>
+                        </div>
+                        <div class="content_box">
+                            <img alt="Image Loading" class="done_check" src="check.png" height="30" width="73">
+                            <a href="#">
+                                <div class="folder">
+                                    <img alt="Image Loading" src="folder.png" height="24" width="24">
+                                </div>
+                                <h3>FOLDER</h3>
+                                <h3 style="color: #076ef5">LGs First Quarter</h3>
+                            </a>
+                            <div class="description">
+                                <p>download your LGs here</p>
+                            </div>
+                        </div>
+                        <div class="onlytext content_box">
+                            <img alt="Image Loading" src="check.png" class="done_check"" height="30" width="73">
+                            <h3>Please proceed to ACAD 2 Room 302, for our laboratory activity today, September 12, 2022(9:40-10:30). Please bring laboratory gowns.</h3>
+                        </div>
+                        <div class="onlytext content_box">
+                            <img alt="Image Loading" src="check.png" class="done_check"" height="30" width="73">
+                            <h3>I hope you have memorized already the names and symbols of cations and anions, including polyatomic ions.</h3>
+                        </div>
+                        <div class="content_box">
+                            <img alt="Image Loading" class="done_check" src="check.png" height="30" width="73">
+                            <a href="#">
+                                <div class="file">
+                                    <img alt="Image Loading" src="file.png" height="24" width="24">
+                                </div>
+                                <h3>FILE</h3>
+                                <h3 style="color: #076ef5">Chemistry 1 Syllabus</h3>
+                            </a>
+                        </div>
+                    </section>
+                    <section>
+                        <h2>▼ FIRST QUARTER</h2>
+                        <div class="onlytext content_box">
+                            <img alt="Image Loading" src="check.png" class="done_check"" height="30" width="73">
+                            <h3>Good morning! We will use the gmeet of the Google classroom for our synchronous session today(Sept 19) and also next week. I already invited all of you to our Google Classroom. Please join.O ur synchronous schedule is every Monday, 9:40-10:30. <span>https://meet.google.com/gnb-ioae-nsv</span></h3>
+                        </div>
+                        <div class="content_box">
+                            <img alt="Image Loading" class="done_check" src="check.png" height="30" width="73">
+                            <a href="#">
+                                <div class="upload">
+                                    <img alt="Image Loading" src="upload.png" height="24" width="24">
+                                </div>
+                                <h3>ASSIGNMENT</h3>
+                                <h3 style="color: #076ef5">Chemistry1 Assessment this Remote Learning</h3>
+                            </a>
+                            <div class="description">
+                                <p>This activity covers the topics on naming/writing formulas of compounds, writing chemical equations and classifying equations using simple patterns, like combination, decomposition, etc.</p>
+                            </div>
+                        </div>
+                        <div class="onlytext content_box">
+                            <img alt="Image Loading" src="check.png" class="done_check"" height="30" width="73">
+                            <h3>We will have a synchronous class on Thursday,  at 9:40 - 10:30 pm(Sept 29). We will use the gmeet of our google classroom.</h3>
+                        </div>
+                        <div class="onlytext content_box">
+                            <img alt="Image Loading" src="check.png" class="done_check"" height="30" width="73">
+                            <h3>We will have a short quiz on Thursday about predicting products/writing chemical equations, types of reaction and balancing</h3>
+                        </div>
+                        <div class="content_box">
+                            <img alt="Image Loading" class="done_check" src="check.png" height="30" width="73">
+                            <a href="#">
+                                <div class="upload">
+                                    <img alt="Image Loading" src="upload.png" height="24" width="24">
+                                </div>
+                                <h3>ASSIGNMENT</h3>
+                                <h3 style="color: #076ef5">Alternative Assessment in Chemistry 1</h3>
+                            </a>
+                        </div>
+                        <div class="onlytext content_box">
+                            <img alt="Image Loading" src="check.png" class="done_check"" height="30" width="73">
+                            <h3>Please submit your Lab Report/Sheet(Chemical Reactions) on or before Friday(Nov 4)</h3>
+                        </div>
+                    </section>
+                    <section>
+                        <h2>▼ SECOND QUARTER</h2>
+                        <p style="margin-left: 30px; margin-right: 30px;">Welcome to the "Second Quarter"! Hoping everybody is excited to learn more chemistry concepts!</p>
+                        <div class="content_box">
+                            <img alt="Image Loading" class="done_check" src="check.png" height="30" width="73">
+                            <a href="#">
+                                <div class="folder">
+                                    <img alt="Image Loading" src="folder.png" height="24" width="24">
+                                </div>
+                                <h3>FOLDER</h3>
+                                <h3 style="color: #076ef5">LGs for SECOND QUARTER</h3>
+                            </a>
+                            <div class="description">
+                                <p>Download your LGs for 2nd quarter here!</p>
+                            </div>
+                        </div>
+                        <div class="onlytext content_box">
+                            <img alt="Image Loading" src="check.png" class="done_check"" height="30" width="73">
+                            <h3>Please read in advance today(Nov 11) Redox Reactions, balancing etc</h3>
+                        </div>
+                        <div class="onlytext content_box">
+                            <img alt="Image Loading" src="check.png" class="done_check"" height="30" width="73">
+                            <h3>I have posted an activity in the Google Classroom. Thanks!</h3>
+                        </div>
+                        <div class="content_box">
+                            <img alt="Image Loading" class="done_check" src="check.png" height="30" width="73">
+                            <a href="quiz.html">
+                                <div class="upload">
+                                    <img alt="Image Loading" src="upload.png" height="24" width="24">
+                                </div>
+                                <h3>ASSIGNMENT</h3>
+                                <h3 style="color: #076ef5">FA on Electron Domain Geometry and Molecular Geometry</h3>
+                            </a>   
+                            <div class="description">
+                                <p>This will be your Formative Assessment 4. The coverage will be about electron domain geometry and molecular geometry</p>
+                            </div>
+                        </div>
+                        <div class="onlytext content_box">
+                            <img alt="Image Loading" src="check.png" class="done_check"" height="30" width="73">
+                            <h3>We will have a make-up class today(Wednesday, Dec 14) from 12:10-1. My request was approved by the CID Chief.</h3>
+                        </div>
+                        <div class="onlytext content_box">
+                            <img alt="Image Loading" src="check.png" class="done_check"" height="30" width="73">
+                            <h3>Let us have a laboratory class during our Chemistry period, 9:40-10:30,today(Friday) Jan 13. Please be early in Room 301 of Acad 2. Thank you!</h3>
+                        </div>
+                    </section>
+                    <section>
+                        <h2>▼ Topic 3</h2>
+                    </section>
+                </article>
+            </div>
+        </div>
+    </body>
+</html>

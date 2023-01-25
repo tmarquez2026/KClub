@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@600&display=swap" rel="stylesheet">
+        <title>Home | KClub</title>
+        <style>
+        body {
+            height: 2800px;
+            margin: 0;
+            background-color: black;
+        }
+        nav {
+            background-color: #081014;
+            box-shadow: 0 -10px 50px#cbffee;
+            position: fixed;
+        }
+        .bottomborder {
+            border-bottom: 3px solid #cbffee;
+            height: 74px;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 0 16px 0 16px;
+        }
+        .pshslogo {
+            background-image: url('Pisaylogo.png'); 
+            background-size: contain; 
+            width: 272px; 
+            height: 52px;
+            display: inline-block;
+        }
+        ul {
+            margin-top: 15px;
+            position: absolute;
+            display: inline;
+        }
+        ul li {
+            font-size: 12pt;
+            font-family: 'Lato', sans-serif;
+            display: inline;
+            color: white;
+            margin-right: 5px;
+        }
+        ul li a {
+            padding-top: 17px;
+            padding-bottom: 17px;
+            padding-left: 10px;
+            padding-right: 10px;
+            text-decoration: none;
+            color: white;
+            border-radius: 20px;
+            border-style: solid;
+            border-width: 3px;
+            border-color: rgba(8, 16, 20, 0)
+        }
+        ul li a:hover {
+            border-radius: 20px;
+            border-style: solid;
+            border-width: 3px;
+            border-color: #cbffee;
+            box-shadow: 0 0px 30px #cbffee; 
+        }
+        #logout {
+            padding-top: 17px;
+            padding-bottom: 17px;
+            padding-left: 10px;
+            padding-right: 10px;
+            text-decoration: none;
+            margin-right: 50px;
+            margin-top: -6px;
+            right: 0;
+            color: rgb(255, 121, 121);
+            border: rgb(255, 163, 163, 0) 3px solid;
+            border-radius: 10px;
+            position: absolute;
+        }
+        #logout:hover {
+            border: red 3px solid;
+            border-radius: 20px;
+            box-shadow: 0 0px 30px rgb(255, 121, 121);
+        }
+        footer {
+            height: 250px;
+            width: 80%;
+            display:flex;
+            padding-left: 10%;
+            padding-right: 10%;
+        }
+        #left{
+            width:30%;
+            flex: 30%;
+            box-sizing: border-box;
+        }
+        #middle{
+            width:30%;
+            text-align: center;
+            flex: 30%;
+            box-sizing: border-box;
+        }
+        #middle div{
+            display: block;
+            box-sizing: border-box;
+        }
+        #right{
+            width:30%;
+            flex: 30%;
+            box-sizing: border-box;
+            text-align: right;
+        }
+        .pe {
+            padding-bottom: 1.6vw;
+        }
+        h1 {
+            color: white;
+            font-family: 'Noto Sans', sans-serif;
+            font-size: 28pt;
+        }
+        h2 {
+            color: white;
+            font-family: 'Noto Sans', sans-serif;
+            font-size: 20pt;
+        }
+        p {
+            color: white;
+            font-family: 'Lato', sans-serif;
+        }
+        hr {
+            color: #cbffee;
+            border: 1px solid;
+            margin: 0;
+        }
+        .vertical-center {
+            margin-top: 40px;
+        }
+        .center {
+            padding: 30px;
+            align-items: center;
+            height: 2500px;
+            border: 3px solid #cbffee;
+            border-radius: 20px;
+            box-shadow: 0 0px 15px #cbffee;
+        }
+        .container-fluid {
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+        #leftside {
+            display: inline-flex;
+        }
+        #lside {
+            display: inline-flex;
+        }
+        #ls{
+            display: inline-flex;
+        }
+        #left{
+            display: inline-flex;
+        }
+        .all{
+            width: 8%;
+            border: 1px solid #cbffee;
+            border-radius: 5px;
+            height: auto;
+            box-shadow: 0 0px 15px #cbffee;
+        }
+        .sort {
+            width: 17%;
+            border: 1px solid #cbffee;
+            border-radius: 5px;
+            height: auto;
+            box-shadow: 0 0px 15px #cbffee;
+            margin-left: 10px;
+        }
+        .search {
+            width: 100%;
+            border: 1px solid #cbffee;
+            border-radius: 5px;
+            height: auto;
+            box-shadow: 0 0px 15px #cbffee;
+        }
+        .adds {
+            width: 17%;
+            border: 1px solid #cbffee;
+            border-radius: 5px;
+            height: auto;
+            box-shadow: 0 0px 15px #cbffee;
+            float: right;
+        }
+        .dark {
+            border: #ccffee solid 3px;
+            background-color: black !important;
+            margin-top: 50px;
+            float: left ;
+            margin-left: 30px;
+        }
+        .first {
+            float:none;
+            border: #cbffee solid 3px;
+            background-color: black !important;
+            margin-top: 50px;
+            float: left;
+            margin-left: 30px;
+        }
+        h5{
+            color: #cbffee;
+        }
+        .img {
+            height: 12rem;
+        }
+        .overdue {
+            width: 80px;
+            height: 30px;
+            background-color: red;
+            margin-left: 15px;
+            text-align: center;
+            font-size: 14px;
+            color: white;
+            border-radius: 10px;
+            padding-top: 4px;
+            font-family: 'Noto Sans', sans-serif !important;
+            box-shadow: 0 0 20px rgb(255, 103, 103);
+        }
+        .card {
+            position: inherit;
+        }
+        @media only screen and (max-width:768px) {
+            .all {
+                width: 12%;
+                height: 30px;
+            }
+            .sort {
+                width: 30%;
+                height: 30px;
+            }
+            .search {
+                margin-top: 20px;
+            }
+            hr {
+                margin-top: 20px;
+            }
+            .card {
+                width: 13rem !important;
+            }
+            .img {
+                height: 10rem;
+            }
+            .stats   {
+                padding-bottom: 25px;
+            }
+            .center {
+                height: 4200px;
+            }
+            .margin {
+                margin-left: 50px;
+            }
+            #logout{
+                margin-left: 120px;
+            }
+            .health {
+                padding-bottom: 25px;
+            }
+        }
+        @media only screen and (max-width:384px) {
+            a.pshslogo {
+                width: 140px;
+                height: 28px;
+                margin-top: 13px;
+            }
+            nav.bottomborder ul li a{
+                font-size: 11px;
+                padding: 4px;
+            }
+            nav.bottomborder ul {
+                padding: 0;
+                margin-left: 10px;
+            }
+            
+            .center {
+                overflow: scroll;
+                height: 4700px;
+            }
+            h1 {
+                font-size: 30px;
+            }
+            .container-fluid {
+                padding-left: 50px;
+                padding-right: 50px;
+            }
+            .all {
+                width: 25%;
+            }
+            .sort {
+                width: 60%;
+            }
+            .search {
+                width: 120%;
+            }
+            hr {
+                width: 200%;
+            }
+            #lside    {
+                width: 180%;
+                max-width: 200%;
+            }
+            #rside {
+                margin-left: 210px;
+            }
+            #ls {
+                width: 160%;
+                max-width: 200%;
+            }
+            .adds {
+                width: 50%;
+            }
+            .overdue {
+                padding: 5px;
+            }
+            .dos {
+                margin-left: 80px;
+            }
+            #rs {
+                margin-left: 210px;
+            }
+            #left {
+                width: 180%;
+                max-width: 200%;
+            }
+            #right {
+                margin-left: 210px;
+            }
+            .card {
+                width: 10rem !important;
+            }
+            #cards {
+                width: 200%;
+            }
+            .padding {
+                padding-bottom: 24px;
+            }
+            .stats {
+                padding-bottom: 50px;
+            }
+            .health {
+                padding-bottom: 100px;
+            }
+            #logout{
+                margin-right: 20px;
+                font-size: 13px;
+                margin-top: 10px;
+                padding: 3px;
+            }
+        }
+        </style>
+    </head>
+    <body>
+        <nav class="bottomborder">
+            <div style="height: 70px; width: 272px; padding-top: 9px;">
+                <a class="pshslogo" href="home.html"></a>
+                <ul>
+                    <li><a href="home.html" style="color: white;">Home</a></li>
+                    <li><a href="author.html" style="color: white;">Author Page</a></li>
+                </ul>
+                <a href="index.html" id="logout">Logout</a>
+            </div>  
+        </nav> <br><br><br><br>
+        <div class="vertical-center">
+            <div class="container-fluid">
+                    <h1>PSHS Knowledge Club - CLC</h1><br>
+                    <div class="center">
+                        <h2>Timeline</h2> <br>
+                        <div class="row">
+                            <div id="leftside" class="col-lg-6">                     
+                                <div class="all" style="text-align: left; padding-left: 10px; color: white">All ▼</div>
+                                <div class="sort" style="text-align: left; padding-left: 10px; color: white">Sort by dates ▼</div>
+                            </div>
+                            <div id="rightside" class="col-lg-6">
+                                <div class="search" style="text-align: left; padding-left: 10px; color: white">Search by activity type or name</div>
+                            </div>
+                        </div>
+                        <br><hr>
+                        <p style="font-family: 'Noto Sans', sans-serif; margin-top: 15px; margin-bottom: 10px;">Monday, 16 January 2023</p>
+                        <div class="row">
+                            <div id="lside" class="col-lg-6">                     
+                                <p>23:59</p>
+                                <img alt style="margin-left: 20px; height: 50px; width: 50px; box-shadow: 0 0 10px rgb(253, 127, 255)" src="assignment_icon.png">
+                                <p style="padding-left: 20px;" class="due"><span style="font-family: 'Noto Sans', sans-serif; color: #076ef5;">2Q Project: Knowledge Hub, Reimagined</span> 
+                                <br> Computer Science 3 · Assignment is due</p>
+                                <div class="overdue">
+                                    Overdue
+                                </div>
+                                
+                            </div>
+                            <div id="rside" class="col-lg-6">
+                                <div class="adds" style="text-align: center; color: white">Add submission</div>
+                            </div>
+                        </div>
+                        <hr>
+                        <p style="font-family: 'Noto Sans', sans-serif; margin-top: 15px; margin-bottom: 20px;">Wednesday, 18 January 2023</p>
+                        <div class="row">
+                            <div id="ls" class="col-lg-6">                     
+                                <p>17:00</p>
+                                <img alt style="margin-left: 20px; height: 50px; width: 50px; box-shadow: 0 0 20px rgb(253, 127, 255)" src="assignment_icon.png">
+                                <p style="padding-left: 20px;"><span style="font-family: 'Noto Sans', sans-serif; color: #076ef5">ALTERNATIBONG PAGTATAYA 2</span> <br> Filipino 3 · Assignment is due</p>
+                                <div class="overdue dos margin">
+                                    Overdue
+                                </div>
+                            </div>
+                            <div id="rs" class="col-lg-6">
+                                <div class="adds" style="text-align: center; color: white">Add submission</div>
+                            </div>
+                        </div>
+                        <hr>
+                        <p style="font-family: 'Noto Sans', sans-serif; margin-top: 15px; margin-bottom: 10px;">Friday, 20 January 2023</p>
+                        <div class="row">
+                            <div id="left" class="col-lg-6">                     
+                                <p>23:59</p>
+                                <img alt style="margin-left: 20px; height: 50px; width: 50px; box-shadow: 0 0 20px rgb(253, 127, 255)" src="assignment_icon.png">
+                                <p style="padding-left: 20px;"><span style="font-family: 'Noto Sans', sans-serif; color: #076ef5">Quarter 2 Alternative Assessment</span> <br> Mathematics 3 · Assignment is due</p>
+                                <div class="overdue">
+                                    Overdue
+                                </div>
+                            </div>
+                            <div id="right" class="col-lg-6">
+                                <div class="adds" style="text-align: center; color: white">Add submission</div>
+                            </div>
+                        </div>
+                        <hr> <br><br>
+                        <h2>My Courses</h2>
+                        <div id="cards">
+                        <a href="course.html">
+                        <div class="card dark purple" style="width: 23rem;box-shadow:0 0 30px #7f51ff;">
+                            <img class="card-img-top img" src="chem.png" alt="Card image cap">
+                            <div class="card-body">
+                              <a href="course.html" style="text-decoration:#cbffee;"><h5 class="card-title" style="color: #7f51ff;;">Chemistry 1</h5></a>
+                              <p class="card-text">General Inorganic Chemistry</p><br><br><br>
+                              <p class="card-text">Subject Teacher:<br>Rodolfo Del Rosario</p>
+                            </div>
+                          </div>
+                        </a>
+                        <div class="card dark" style="width: 23rem; box-shadow:0 0 30px #0004fd;">
+                        <img class="card-img-top img" src="bio.png" alt="Card image cap">
+                        <div class="card-body">
+                            <a href="#" style="text-decoration:#cbffee;"><h5 class="card-title" style="color:#0004fd;">Biology 1</h5></a>
+                            <p class="card-text padding">Fundamentals of Biology 1</p><br><br><br>
+                            <p class="card-text">Subject Teacher:<br>Clarisse Laine Muli</p>
+                        </div>
+                        </div>
+                        <div class="card dark" style="width: 23rem; box-shadow:0 0 30px #1a99aa;">
+                            <img class="card-img-top img" src="cs.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <a href="#" style="text-decoration:#cbffee;"><h5 class="card-title" style="color: #1a99aa;;">Computer science</h5></a>
+                                <p class="card-text padding">Client-Side Web Development</p><br><br><br>
+                                <p class="card-text">Subject Teacher:<br>Jan Micheal Ibanez</p>
+                            </div>
+                            </div>
+                        <div class="card dark" style="width: 23rem;box-shadow:0 0 40px #3101b7;">
+                        <img class="card-img-top img" src="eng.gif" alt="Card image cap">
+                        <div class="card-body">
+                            <a href="#" style="text-decoration:#cbffee;"><h5 class="card-title" style="color:#3101b7;">English 3</h5></a>
+                            <p class="card-text">Communication Arts 3 and English and American Literature</p><br><br>
+                            <p class="card-text">Subject Teacher:<br>Roma Angelou Dizon</p>
+                        </div>
+                        </div>
+                        <div class="card first" style="width: 23rem;box-shadow:0 0 30px #ffe771;">
+                        <img class="card-img-top img" src="fil.png" alt="Card image cap">
+                        <div class="card-body">
+                            <a href="#" style="text-decoration:#cbffee;"><h5 class="card-title" style="color: #ffe771;;">Filipino 3</h5></a>
+                            <p class="card-text">Retorika Pagsusuri at Pagpapahalagang Pampanitikan</p><br><br>
+                            <p class="card-text">Subject Teacher:<br>Charisse Mendoza</p>
+                        </div>
+                        </div>
+                        <div class="card dark" style="width: 23rem;box-shadow:0 0 30px #1184ff;">
+                        <img class="card-img-top img" src="stats.png" alt="Card image cap">
+                        <div class="card-body">
+                            <a href="#" style="text-decoration:#cbffee;"><h5 class="card-title" style="color:#1184ff;">Statistics 1</h5></a>
+                            <p class="card-text stats">Introduction to Statistics</p><br><br><br>
+                            <p class="card-text">Subject Teacher:<br>Crisostomo Bato</p>
+                        </div>
+                        </div>
+                        <div class="card dark" style="width: 23rem;box-shadow:0 0 60px #004c9c;">
+                        <img class="card-img-top img" src="math.png" alt="Card image cap">
+                        <div class="card-body">
+                            <a href="#" style="text-decoration:#cbffee;"><h5 class="card-title" style="color: #004c9c;;">Mathematics 3</h5></a>
+                            <p class="card-text">Basic plane, coordinate geometry, transformational geometry, and more</p><br><br>
+                            <p class="card-text">Subject Teacher:<br>Mar Joseph Fernandez</p>
+                        </div>
+                        </div>
+                        <div class="card dark" style="width: 23rem;box-shadow:0 0 30px #fdffcb; ">
+                        <img class="card-img-top img" src="health.gif" alt="Card image cap">
+                        <div class="card-body">
+                            <a href="#" style="text-decoration:#cbffee;"><h5 class="card-title" style="color: #fdffcb;">Health 3</h5></a>
+                            <p class="card-text health">Family Health and Disease Prevention</p><br><br><br>
+                            <p class="card-text">Subject Teacher:<br>Noel Vital</p>
+                        </div>
+                        </div>
+                        <div class="card first" style="width: 23rem;box-shadow:0 0 30px #d19cff;">
+                        <img class="card-img-top img" src="pe.png" alt="Card image cap">
+                        <div class="card-body">
+                            <a href="#" style="text-decoration:#cbffee;"><h5 class="card-title" style="color: #d19cff;;">Physical Education 3</h5></a>
+                            <p class="card-text pe">Physical Education</p><br><br> 
+                            <p class="card-text">Subject Teacher:<br>Marvin Anthony Alagos</p>
+                        </div>
+                        </div>
+                        <div class="card dark" style="width: 23rem;box-shadow:0 0 30px #ff78ac;">
+                        <img class="card-img-top img" src="valed.png" alt="Card image cap">
+                        <div class="card-body">
+                            <a href="#" style="text-decoration:#cbffee;"><h5 class="card-title" style="color: #ff78ac;;">Values Education 3</h5></a>
+                            <p class="card-text">Values Education 3</p><br><br>
+                            <p class="card-text">Subject Teacher:<br>Michelle Ocampo</p>
+                        </div>
+                        </div>
+                        <div class="card dark" style="width: 23rem;box-shadow:0 0 30px #97ffdc;">
+                        <img class="card-img-top img" src="p6.png" alt="Card image cap">
+                        <div class="card-body">
+                            <a href="#" style="text-decoration:#cbffee;"><h5 class="card-title" style="color: #97ffdc;">Physics 1</h5></a>
+                            <p class="card-text">Fundamentals of Physics 1</p><br><br>
+                            <p class="card-text">Subject Teacher:<br>Jan-Derrick Junio</p>
+                        </div>
+                        </div>
+                        <div class="card dark" style="width: 23rem;box-shadow:0 0 30px #a733ff;">
+                        <img class="card-img-top img" src="socsci.png" alt="Card image cap">
+                        <div class="card-body">
+                            <a href="#" style="text-decoration:#cbffee;"><h5 class="card-title" style="color: #a733ff;">Social Science 3</h5></a>
+                            <p class="card-text stats">World History 2</p><br><br>
+                            <p class="card-text">Subject Teacher:<br>Marinel Sanchez</p>
+                        </div>
+                        </div>
+                        <div class="card first" style="width: 23rem;box-shadow:0 0 60px #003e81;">
+                        <img class="card-img-top img" src="hr.png" alt="Card image cap">
+                        <div class="card-body">
+                            <a href="#" style="text-decoration:#cbffee;"><h5 class="card-title" style="color: #003e81;">Homeroom 9-Arayat</h5></a>
+                            <br><br><br><br>
+                            <p class="card-text">Adviser:<br>Roma Angelou Dizon</p>
+                        </div>
+                        </div>
+                        <a href="author.html">
+                        <div class="card first" style="width: 23rem;box-shadow:0 0 30px #ff0202;">
+                        <img class="card-img-top img" src="author.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <a href="#" style="text-decoration:#cbffee;"><h5 class="card-title" style="color: #ff0202;">Author Page</h5></a>
+                            <br><br><br><br>
+                            <p class="card-text">Group Leader:<br>Tristan Japheth L. Marquez</p>
+                        </div>
+                        </div>
+                        </a>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+           
+    </body>
+</html>
